@@ -1,0 +1,68 @@
+:root {
+  color-scheme: light;
+}
+
+body.bg-app {
+  background:
+    radial-gradient(1200px 560px at -10% -28%, rgba(51, 102, 255, 0.20), transparent 62%),
+    radial-gradient(920px 480px at 112% -12%, rgba(14, 165, 233, 0.18), transparent 60%),
+    linear-gradient(180deg, #f6f9ff 0%, #eef3fb 100%);
+}
+
+::selection {
+  background: rgba(51, 102, 255, 0.18);
+  color: #0f172a;
+}
+
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #c6d7ff transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #c6d7ff;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #9ab8ff;
+}
+
+.lesson-animate {
+  animation: lesson-fade 260ms ease;
+}
+
+.active-step-ring {
+  animation: active-ring 1.4s ease-in-out infinite;
+}
+
+@keyframes lesson-fade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes active-ring {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(51, 102, 255, 0.16);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgba(51, 102, 255, 0);
+  }
+}

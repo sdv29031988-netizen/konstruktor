@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BilimX — Конструктор курсов</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ["Sora", "Segoe UI", "sans-serif"],
+            body: ["Plus Jakarta Sans", "Segoe UI", "sans-serif"],
+          },
+          colors: {
+            brand: {
+              50: "#edf4ff",
+              100: "#dbe9ff",
+              200: "#bdd7ff",
+              300: "#93bcff",
+              400: "#5f98ff",
+              500: "#3366ff",
+              600: "#214ee0",
+              700: "#1a3db4",
+            },
+          },
+          boxShadow: {
+            soft: "0 28px 55px -28px rgba(51, 102, 255, 0.35)",
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-app min-h-screen font-body text-slate-900 antialiased">
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" data-presets="env,react" src="./app.jsx"></script>
+</body>
+</html>
